@@ -1,0 +1,4 @@
+n,block_type,rt,acc,stimulus,answer,correct_answer
+0,experiment,2.3191317999735475,1,1.png,"['2', '5']","['2', '5']"
+1,experiment,1.9271482001058757,0,2.png,['1'],"['1', '5']"
+2,experiment,4.062168600037694,0,3.png,"['2', '4']","['1', '4']"
