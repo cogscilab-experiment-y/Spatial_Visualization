@@ -7,7 +7,7 @@ def part_info(test=False):
         info = {'Kod badanego': '', 'Wiek': '20', 'Płeć': 'M'}
     else:
         info = {'Kod badanego': '', 'Wiek': '', 'Płeć': ['M', "K"]}
-        dict_dlg = gui.DlgFromDict(dictionary=info, title='Stroop')
+        dict_dlg = gui.DlgFromDict(dictionary=info, title='Spatial_Visualization')
         if not dict_dlg.OK:
             exit(1)
     info = {'Part_id': info['Kod badanego'],
@@ -24,4 +24,15 @@ def show_info(win, file_name, text_size, text_color, screen_res, insert=''):
     key = event.waitKeys(keyList=['f7', 'return', 'space'])
     if key == ['f7']:
         raise Exception('Experiment finished by user on info screen! F7 pressed.')
+    win.flip()
+
+
+def show_image(win, file_name, size, key='f7'):
+    print(size)
+    image = visual.ImageStim(win=win, image=file_name, interpolate=True, size=size)
+    image.draw()
+    win.flip()
+    clicked = event.waitKeys(keyList=[key, 'return', 'space'])
+    if clicked == [key]:
+        exit(0)
     win.flip()

@@ -8,7 +8,7 @@ import string
 
 from code.load_data import load_config, load_images, prepare_block_stimulus
 from code.screen_misc import get_screen_res
-from code.show_info import part_info, show_info
+from code.show_info import part_info, show_info, show_image
 from code.check_exit import check_exit
 
 RESULTS = []
@@ -58,8 +58,9 @@ def show_timer(timer, clock, config):
 
 def block(config, images, block_type, win, fixation, clock, screen_res, answers, answers_buttons, mouse, feedback,
           extra_text, clock_image, timer):
-    show_info(win, join('.', 'messages', f'instruction_{block_type}.txt'), text_color=config["text_color"],
-              text_size=config["text_size"], screen_res=screen_res)
+    show_image(win, join('.', 'messages', 'instruction.png'), list(screen_res.values()))
+    # show_info(win, join('.', 'messages', f'instruction_{block_type}.txt'), text_color=config["text_color"],
+    #           text_size=config["text_size"], screen_res=screen_res)
 
     n = -1
     for trial in images:

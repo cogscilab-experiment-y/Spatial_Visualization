@@ -1,4 +1,4 @@
-procedure_test: True
+procedure_test: False
 randomize_trails: False
 do_training: False
 n_answers: 1 # number of answers per trial
@@ -9,7 +9,7 @@ text_size: 28
 
 # stimulus
 stimulus_pos: [0, 150]
-stimulus_size: 400
+stimulus_size: [600, 425]
 answer_time: 10
 
 
