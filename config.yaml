@@ -9,8 +9,8 @@ text_size: 28
 
 # stimulus
 stimulus_pos: [0, 150]
-stimulus_size: [600, 425]
-answer_time: 10
+stimulus_size: [801, 601]
+answer_time: 60
 
 
 # fixation point
@@ -27,7 +27,7 @@ answers_type: mouse # mouse, keyboard, or text
 answer_size: 56
 answer_color: black
 answer_symbols: {A: A, B: B} # key is real answer, value is presented symbol
-answer_pos: {A: [-50, -250], B: [50, -250]}
+answer_pos: {A: [50, -250], B: [300, -250]}
 answer_box_color: green
 answer_box_width: 6
 answer_box_size: 86
@@ -79,6 +79,6 @@ clock_show_time: 7
 
 # timer
 show_timer: true
-timer_pos: [450, 350]
+timer_pos: [650, 350]
 timer_color: black
-timer_size: 40
+timer_size: 60

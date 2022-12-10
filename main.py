@@ -160,6 +160,8 @@ def block(config, images, block_type, win, fixation, clock, screen_res, answers,
         else:
             correct_answer = str(answers.loc[(answers['item_type'] == block_type) &
                                              (answers['item_id'] == trial["image_ID"])]['answer'].iloc[0])
+            if answer:
+                answer = answer[0]
         if answer:
             acc = 1 if answer == correct_answer else 0
         trial_results = {"n": n, "block_type": block_type,
